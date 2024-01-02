@@ -16,7 +16,7 @@ def define_user_move(user_type,last_moves=[]):
     user_type = user_type.lower()
     if user_type == "manual":
         user_move = get_user_play()
-    elif user_type == "interactive":
+    elif user_type == "learning":
         user = agent.Agent(0.33, 0.34, 0.33)
         user_pred = user.predict_move(last_moves)
         user_move = agent.play_next(user_pred)
